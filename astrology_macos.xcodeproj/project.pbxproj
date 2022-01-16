@@ -14,6 +14,7 @@
 		F43E26A727948CCA003570EC /* astrology_macosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E26A627948CCA003570EC /* astrology_macosTests.swift */; };
 		F43E26B127948CCA003570EC /* astrology_macosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E26B027948CCA003570EC /* astrology_macosUITests.swift */; };
 		F43E26B327948CCA003570EC /* astrology_macosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E26B227948CCA003570EC /* astrology_macosUITestsLaunchTests.swift */; };
+		F43E26C227948ECE003570EC /* Swe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E26C127948ECE003570EC /* Swe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		F43E26AC27948CCA003570EC /* astrology_macosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = astrology_macosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43E26B027948CCA003570EC /* astrology_macosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astrology_macosUITests.swift; sourceTree = "<group>"; };
 		F43E26B227948CCA003570EC /* astrology_macosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astrology_macosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F43E26C127948ECE003570EC /* Swe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		F43E269327948CC9003570EC /* astrology_macos */ = {
 			isa = PBXGroup;
 			children = (
+				F43E26BF27948EB6003570EC /* Types */,
 				F43E269427948CC9003570EC /* astrology_macosApp.swift */,
 				F43E269627948CC9003570EC /* ContentView.swift */,
 				F43E269827948CCA003570EC /* Assets.xcassets */,
@@ -127,6 +130,14 @@
 				F43E26B227948CCA003570EC /* astrology_macosUITestsLaunchTests.swift */,
 			);
 			path = astrology_macosUITests;
+			sourceTree = "<group>";
+		};
+		F43E26BF27948EB6003570EC /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				F43E26C127948ECE003570EC /* Swe.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				F43E269727948CC9003570EC /* ContentView.swift in Sources */,
 				F43E269527948CC9003570EC /* astrology_macosApp.swift in Sources */,
+				F43E26C227948ECE003570EC /* Swe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
