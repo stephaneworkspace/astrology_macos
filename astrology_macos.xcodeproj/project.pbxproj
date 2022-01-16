@@ -15,6 +15,7 @@
 		F43E26B127948CCA003570EC /* astrology_macosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E26B027948CCA003570EC /* astrology_macosUITests.swift */; };
 		F43E26B327948CCA003570EC /* astrology_macosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E26B227948CCA003570EC /* astrology_macosUITestsLaunchTests.swift */; };
 		F43E26C227948ECE003570EC /* Swe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E26C127948ECE003570EC /* Swe.swift */; };
+		F43E270227949679003570EC /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = F43E270127949679003570EC /* version.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		F43E26B027948CCA003570EC /* astrology_macosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astrology_macosUITests.swift; sourceTree = "<group>"; };
 		F43E26B227948CCA003570EC /* astrology_macosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astrology_macosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F43E26C127948ECE003570EC /* Swe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swe.swift; sourceTree = "<group>"; };
+		F43E26FF27949679003570EC /* astrology_macos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "astrology_macos-Bridging-Header.h"; sourceTree = "<group>"; };
+		F43E270027949679003570EC /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		F43E270127949679003570EC /* version.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = version.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				F43E26C127948ECE003570EC /* Swe.swift */,
+				F43E270027949679003570EC /* version.h */,
+				F43E270127949679003570EC /* version.c */,
+				F43E26FF27949679003570EC /* astrology_macos-Bridging-Header.h */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -208,6 +215,7 @@
 				TargetAttributes = {
 					F43E269027948CC9003570EC = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					F43E26A127948CCA003570EC = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -270,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43E270227949679003570EC /* version.c in Sources */,
 				F43E269727948CC9003570EC /* ContentView.swift in Sources */,
 				F43E269527948CC9003570EC /* astrology_macosApp.swift in Sources */,
 				F43E26C227948ECE003570EC /* Swe.swift in Sources */,
@@ -429,6 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = astrology_macos/astrology_macos.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -441,10 +451,13 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "\"${PROJECT_DIR}/astrology_macos/C/Swe/swisseph/2.08/src\"/**";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "stephane.bressani.dev.astrology-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "astrology_macos/Types/astrology_macos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -454,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = astrology_macos/astrology_macos.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -466,10 +480,12 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "\"${PROJECT_DIR}/astrology_macos/C/Swe/swisseph/2.08/src\"/**";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "stephane.bressani.dev.astrology-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "astrology_macos/Types/astrology_macos-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
