@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F43E269527948CC9003570EC /* astrology_macosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E269427948CC9003570EC /* astrology_macosApp.swift */; };
+		F43E269727948CC9003570EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E269627948CC9003570EC /* ContentView.swift */; };
+		F43E269927948CCA003570EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43E269827948CCA003570EC /* Assets.xcassets */; };
+		F43E269C27948CCA003570EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43E269B27948CCA003570EC /* Preview Assets.xcassets */; };
+		F43E26A727948CCA003570EC /* astrology_macosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E26A627948CCA003570EC /* astrology_macosTests.swift */; };
+		F43E26B127948CCA003570EC /* astrology_macosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E26B027948CCA003570EC /* astrology_macosUITests.swift */; };
+		F43E26B327948CCA003570EC /* astrology_macosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E26B227948CCA003570EC /* astrology_macosUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F43E26A327948CCA003570EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F43E268927948CC9003570EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F43E269027948CC9003570EC;
+			remoteInfo = astrology_macos;
+		};
+		F43E26AD27948CCA003570EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F43E268927948CC9003570EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F43E269027948CC9003570EC;
+			remoteInfo = astrology_macos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F43E269127948CC9003570EC /* astrology_macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = astrology_macos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43E269427948CC9003570EC /* astrology_macosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astrology_macosApp.swift; sourceTree = "<group>"; };
+		F43E269627948CC9003570EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F43E269827948CCA003570EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F43E269B27948CCA003570EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F43E269D27948CCA003570EC /* astrology_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = astrology_macos.entitlements; sourceTree = "<group>"; };
+		F43E26A227948CCA003570EC /* astrology_macosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = astrology_macosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43E26A627948CCA003570EC /* astrology_macosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astrology_macosTests.swift; sourceTree = "<group>"; };
+		F43E26AC27948CCA003570EC /* astrology_macosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = astrology_macosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43E26B027948CCA003570EC /* astrology_macosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astrology_macosUITests.swift; sourceTree = "<group>"; };
+		F43E26B227948CCA003570EC /* astrology_macosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astrology_macosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F43E268E27948CC9003570EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43E269F27948CCA003570EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43E26A927948CCA003570EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F43E268827948CC9003570EC = {
+			isa = PBXGroup;
+			children = (
+				F43E269327948CC9003570EC /* astrology_macos */,
+				F43E26A527948CCA003570EC /* astrology_macosTests */,
+				F43E26AF27948CCA003570EC /* astrology_macosUITests */,
+				F43E269227948CC9003570EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F43E269227948CC9003570EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F43E269127948CC9003570EC /* astrology_macos.app */,
+				F43E26A227948CCA003570EC /* astrology_macosTests.xctest */,
+				F43E26AC27948CCA003570EC /* astrology_macosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F43E269327948CC9003570EC /* astrology_macos */ = {
+			isa = PBXGroup;
+			children = (
+				F43E269427948CC9003570EC /* astrology_macosApp.swift */,
+				F43E269627948CC9003570EC /* ContentView.swift */,
+				F43E269827948CCA003570EC /* Assets.xcassets */,
+				F43E269D27948CCA003570EC /* astrology_macos.entitlements */,
+				F43E269A27948CCA003570EC /* Preview Content */,
+			);
+			path = astrology_macos;
+			sourceTree = "<group>";
+		};
+		F43E269A27948CCA003570EC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F43E269B27948CCA003570EC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F43E26A527948CCA003570EC /* astrology_macosTests */ = {
+			isa = PBXGroup;
+			children = (
+				F43E26A627948CCA003570EC /* astrology_macosTests.swift */,
+			);
+			path = astrology_macosTests;
+			sourceTree = "<group>";
+		};
+		F43E26AF27948CCA003570EC /* astrology_macosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F43E26B027948CCA003570EC /* astrology_macosUITests.swift */,
+				F43E26B227948CCA003570EC /* astrology_macosUITestsLaunchTests.swift */,
+			);
+			path = astrology_macosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F43E269027948CC9003570EC /* astrology_macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43E26B627948CCA003570EC /* Build configuration list for PBXNativeTarget "astrology_macos" */;
+			buildPhases = (
+				F43E268D27948CC9003570EC /* Sources */,
+				F43E268E27948CC9003570EC /* Frameworks */,
+				F43E268F27948CC9003570EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = astrology_macos;
+			productName = astrology_macos;
+			productReference = F43E269127948CC9003570EC /* astrology_macos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F43E26A127948CCA003570EC /* astrology_macosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43E26B927948CCA003570EC /* Build configuration list for PBXNativeTarget "astrology_macosTests" */;
+			buildPhases = (
+				F43E269E27948CCA003570EC /* Sources */,
+				F43E269F27948CCA003570EC /* Frameworks */,
+				F43E26A027948CCA003570EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F43E26A427948CCA003570EC /* PBXTargetDependency */,
+			);
+			name = astrology_macosTests;
+			productName = astrology_macosTests;
+			productReference = F43E26A227948CCA003570EC /* astrology_macosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F43E26AB27948CCA003570EC /* astrology_macosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43E26BC27948CCA003570EC /* Build configuration list for PBXNativeTarget "astrology_macosUITests" */;
+			buildPhases = (
+				F43E26A827948CCA003570EC /* Sources */,
+				F43E26A927948CCA003570EC /* Frameworks */,
+				F43E26AA27948CCA003570EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F43E26AE27948CCA003570EC /* PBXTargetDependency */,
+			);
+			name = astrology_macosUITests;
+			productName = astrology_macosUITests;
+			productReference = F43E26AC27948CCA003570EC /* astrology_macosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F43E268927948CC9003570EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					F43E269027948CC9003570EC = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F43E26A127948CCA003570EC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F43E269027948CC9003570EC;
+					};
+					F43E26AB27948CCA003570EC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F43E269027948CC9003570EC;
+					};
+				};
+			};
+			buildConfigurationList = F43E268C27948CC9003570EC /* Build configuration list for PBXProject "astrology_macos" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F43E268827948CC9003570EC;
+			productRefGroup = F43E269227948CC9003570EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F43E269027948CC9003570EC /* astrology_macos */,
+				F43E26A127948CCA003570EC /* astrology_macosTests */,
+				F43E26AB27948CCA003570EC /* astrology_macosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F43E268F27948CC9003570EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43E269C27948CCA003570EC /* Preview Assets.xcassets in Resources */,
+				F43E269927948CCA003570EC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43E26A027948CCA003570EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43E26AA27948CCA003570EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F43E268D27948CC9003570EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43E269727948CC9003570EC /* ContentView.swift in Sources */,
+				F43E269527948CC9003570EC /* astrology_macosApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43E269E27948CCA003570EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43E26A727948CCA003570EC /* astrology_macosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43E26A827948CCA003570EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43E26B127948CCA003570EC /* astrology_macosUITests.swift in Sources */,
+				F43E26B327948CCA003570EC /* astrology_macosUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F43E26A427948CCA003570EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F43E269027948CC9003570EC /* astrology_macos */;
+			targetProxy = F43E26A327948CCA003570EC /* PBXContainerItemProxy */;
+		};
+		F43E26AE27948CCA003570EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F43E269027948CC9003570EC /* astrology_macos */;
+			targetProxy = F43E26AD27948CCA003570EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F43E26B427948CCA003570EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F43E26B527948CCA003570EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F43E26B727948CCA003570EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = astrology_macos/astrology_macos.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"astrology_macos/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "stephane.bressani.dev.astrology-macos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F43E26B827948CCA003570EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = astrology_macos/astrology_macos.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"astrology_macos/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "stephane.bressani.dev.astrology-macos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F43E26BA27948CCA003570EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "stephane.bressani.dev.astrology-macosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/astrology_macos.app/Contents/MacOS/astrology_macos";
+			};
+			name = Debug;
+		};
+		F43E26BB27948CCA003570EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "stephane.bressani.dev.astrology-macosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/astrology_macos.app/Contents/MacOS/astrology_macos";
+			};
+			name = Release;
+		};
+		F43E26BD27948CCA003570EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "stephane.bressani.dev.astrology-macosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = astrology_macos;
+			};
+			name = Debug;
+		};
+		F43E26BE27948CCA003570EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "stephane.bressani.dev.astrology-macosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = astrology_macos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F43E268C27948CC9003570EC /* Build configuration list for PBXProject "astrology_macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43E26B427948CCA003570EC /* Debug */,
+				F43E26B527948CCA003570EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F43E26B627948CCA003570EC /* Build configuration list for PBXNativeTarget "astrology_macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43E26B727948CCA003570EC /* Debug */,
+				F43E26B827948CCA003570EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F43E26B927948CCA003570EC /* Build configuration list for PBXNativeTarget "astrology_macosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43E26BA27948CCA003570EC /* Debug */,
+				F43E26BB27948CCA003570EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F43E26BC27948CCA003570EC /* Build configuration list for PBXNativeTarget "astrology_macosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43E26BD27948CCA003570EC /* Debug */,
+				F43E26BE27948CCA003570EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F43E268927948CC9003570EC /* Project object */;
+}
