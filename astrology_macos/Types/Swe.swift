@@ -17,6 +17,15 @@ func ptrFromAddress<T>(p: UnsafeMutablePointer<T>) -> UnsafeMutablePointer<T> {
     return p
 }
 
+
+func makeCString(from str: String) -> UnsafeMutablePointer<Int8> {
+    let count = str.utf8CString.count
+    let result: UnsafeMutableBufferPointer<Int8> = UnsafeMutableBufferPointer<Int8>.allocate(capacity: count)
+    // func initialize<S>(from: S) -> (S.Iterator, UnsafeMutableBufferPointer<Element>.Index)
+    _ = result.initialize(from: str.utf8CString)
+    return result.baseAddress!
+}
+
 // The Ephemeris file related functions
 class Swe02 {
     // Set path ephe file
@@ -51,10 +60,16 @@ class Swe02 {
 
     // Get library path (don't work on apple)
     func get_library_path() -> String {
-        var pathCString = "".cString(using: .utf8)
-        let pathPtr = UnsafeMutablePointer<Int8>(mutating: &pathCString!)
+        var path = ""
+        var pathCString = path.cString(using: .utf8)
+        //var pathCString = makeCString(from: path)//
+        //var pathCString = path.cString(using: .utf8)
+
+        //var pathPtr: UnsafeMutablePointer<Int8> = .init(&pathCString!);
+
+        let pathPtr = UnsafeMutablePointer<Int8>.allocate(capacity: 255)
         let res = String.init(cString: swe_get_library_path(pathPtr)) as String
-        //  free(pathPtr)
+        free(pathPtr)
         return res
     }
 
