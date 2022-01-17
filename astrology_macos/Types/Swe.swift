@@ -13,6 +13,10 @@ enum Bg {
     case ChoseNote, ChoseScale, Empty
 }
 
+func ptrFromAddress<T>(p: UnsafeMutablePointer<T>) -> UnsafeMutablePointer<T> {
+    return p
+}
+
 // The Ephemeris file related functions
 class Swe02 {
     // Set path ephe file
@@ -39,7 +43,7 @@ class Swe02 {
         set_ephe_path()
         let version = ""
         let versionCString = version.cString(using: .utf8)
-        let versionPtr = UnsafeMutablePointer<Int8>(mutating: versionCString)
+        let versionPtr = UnsafeMutablePointer<Int8>(mutating: versionCString) // TODO *const not mut ?!
         let res = String.init(cString: swe_version(versionPtr)) as String
         close()
         return res
@@ -47,10 +51,10 @@ class Swe02 {
 
     // Get library path (don't work on apple)
     func get_library_path() -> String {
-        let path = "./"
-        let pathCString = path.cString(using: .utf8)
-        let pathPtr = UnsafeMutablePointer<Int8>(mutating: pathCString)
+        var pathCString = "".cString(using: .utf8)
+        let pathPtr = UnsafeMutablePointer<Int8>(mutating: &pathCString!)
         let res = String.init(cString: swe_get_library_path(pathPtr)) as String
+        //  free(pathPtr)
         return res
     }
 
@@ -68,15 +72,37 @@ struct Swe03CalcUtResult {
 }
 
 extension Swe03CalcUtResult {
-    /**
-     Resource name to string
-     - Parameter ext: Optional extension of file
-     - Returns: String with resource inside
-     *//*
-    func calc_ut(tjd_ut: Double, ipl: Bodies, iflag: Int) -> Self {
-
-
-    }*/
+    mutating func calc_ut(tjd_ut: Double, ipl: Bodies, iflag: Int) {
+        var xx: [Double] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        let xxPtr = UnsafeMutablePointer<Double>(mutating: xx)
+        let serrString = ""
+        let serrCString = serrString.cString(using: .utf8)
+        let serrPtr = UnsafeMutablePointer<Int8>(mutating: serrCString)
+        let status: Int
+        // TODO make proper Node South/True later
+        if ipl == Bodies.SouthNode {
+            status = Int(swe_calc_ut(tjd_ut, Int32(Bodies.TrueNode.rawValue), Int32(iflag), xxPtr, serrPtr))
+        } else {
+            status = Int(swe_calc_ut(tjd_ut, Int32(ipl.rawValue), Int32(iflag), xxPtr, serrPtr))
+        }
+        let serrString2 = "." // TODO later String.init(cString: serrCString!) as String
+        // TODO make proper Node South/True later
+        if ipl == Bodies.SouthNode {
+            xx[0] += 180.0
+            if xx[0] >= 360.0 {
+                xx[0] -= 360.0
+            }
+        }
+        longitude = xx[0]
+        latitude = xx[1]
+        distance_au = xx[2]
+        speed_longitude = xx[3]
+        speed_latitude = xx[4]
+        speed_distance_au = xx[5]
+        serr = serrString2
+        free(xxPtr)
+        free(serrPtr)
+    }
 }
 
 class Swe08 {
@@ -184,3 +210,31 @@ enum Bodies: Int {
 enum Calandar: Int {
     case Julian = 0, Gregorian = 1
 }
+
+/*
+ pub enum OptionalFlag {
+    JplEph = 1,
+    SwissEph = 2,
+    Moshier = 4,
+    Heliocentric = 8,
+    TruePosition = 16,
+    J2000Equinox = 32,
+    NoNutation = 64,
+    Speed3 = 128,
+    Speed = 256,
+    NoGravitanionalDeflection = 512,
+    NoAnnualAberration = 1024,
+    AstronomicPosition = 1024 | 512,
+    // AstronomicPosition = OptionalFlag::NoAnnualAberration
+    //     | OptionalFlag::NoGravitanionalDeflection,
+    EquatorialPosition = 2 * 1024,
+    XYZCartesianNotPolarCoordinate = 4 * 1024,
+    Radians = 8 * 1024,
+    BarycentricPosition = 16 * 1024,
+    TopocentricPosition = 32 * 1024,
+    SideralPosition = 64 * 1024,
+    ICRS = 128 * 1024,
+    Dpsideps1980 = 256 * 1024,
+    JplHorApprox = 512 * 1024,
+}
+ */
