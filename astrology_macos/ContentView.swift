@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    var hello: Hello = Hello()
+    var swe02: Swe02 = Swe02()
     var body: some View {
-        Text("Hello, world!" + hello.hello_world())
+        Text("Version: " + swe02.version())
             .padding()
     }
 }

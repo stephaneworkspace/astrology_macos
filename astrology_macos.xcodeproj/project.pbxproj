@@ -16,6 +16,24 @@
 		F43E26B327948CCA003570EC /* astrology_macosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E26B227948CCA003570EC /* astrology_macosUITestsLaunchTests.swift */; };
 		F43E26C227948ECE003570EC /* Swe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E26C127948ECE003570EC /* Swe.swift */; };
 		F43E270227949679003570EC /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = F43E270127949679003570EC /* version.c */; };
+		F49536AB27959FBA00EBD463 /* swehel.c in Sources */ = {isa = PBXBuildFile; fileRef = F495368C27959FB800EBD463 /* swehel.c */; };
+		F49536AC27959FBA00EBD463 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = F495368D27959FB800EBD463 /* CMakeLists.txt */; };
+		F49536AD27959FBA00EBD463 /* swemplan.c in Sources */ = {isa = PBXBuildFile; fileRef = F495368F27959FB800EBD463 /* swemplan.c */; };
+		F49536AE27959FBA00EBD463 /* swejpl.c in Sources */ = {isa = PBXBuildFile; fileRef = F495369127959FB800EBD463 /* swejpl.c */; };
+		F49536AF27959FBA00EBD463 /* seleapsec.txt in Resources */ = {isa = PBXBuildFile; fileRef = F495369427959FB800EBD463 /* seleapsec.txt */; };
+		F49536B027959FBA00EBD463 /* sedeltat.txt.inactive in Resources */ = {isa = PBXBuildFile; fileRef = F495369527959FB800EBD463 /* sedeltat.txt.inactive */; };
+		F49536B127959FBA00EBD463 /* swedate.c in Sources */ = {isa = PBXBuildFile; fileRef = F495369627959FB800EBD463 /* swedate.c */; };
+		F49536B227959FBA00EBD463 /* swehouse.c in Sources */ = {isa = PBXBuildFile; fileRef = F495369727959FB900EBD463 /* swehouse.c */; };
+		F49536B327959FBA00EBD463 /* swephlib.c in Sources */ = {isa = PBXBuildFile; fileRef = F495369827959FB900EBD463 /* swephlib.c */; };
+		F49536B427959FBA00EBD463 /* swepdate.c in Sources */ = {isa = PBXBuildFile; fileRef = F495369927959FB900EBD463 /* swepdate.c */; };
+		F49536B627959FBA00EBD463 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = F495369B27959FB900EBD463 /* Makefile */; };
+		F49536B727959FBA00EBD463 /* sweph.c in Sources */ = {isa = PBXBuildFile; fileRef = F495369D27959FB900EBD463 /* sweph.c */; };
+		F49536B827959FBA00EBD463 /* swepcalc.c in Sources */ = {isa = PBXBuildFile; fileRef = F49536A027959FB900EBD463 /* swepcalc.c */; };
+		F49536B927959FBA00EBD463 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F49536A227959FB900EBD463 /* LICENSE */; };
+		F49536BA27959FBA00EBD463 /* swecl.c in Sources */ = {isa = PBXBuildFile; fileRef = F49536A427959FB900EBD463 /* swecl.c */; };
+		F49536BB27959FBA00EBD463 /* seorbel.txt in Resources */ = {isa = PBXBuildFile; fileRef = F49536A727959FB900EBD463 /* seorbel.txt */; };
+		F49536BC27959FBA00EBD463 /* swemmoon.c in Sources */ = {isa = PBXBuildFile; fileRef = F49536A927959FB900EBD463 /* swemmoon.c */; };
+		F49536BD27959FBA00EBD463 /* sefstars.txt in Resources */ = {isa = PBXBuildFile; fileRef = F49536AA27959FBA00EBD463 /* sefstars.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +69,37 @@
 		F43E26FF27949679003570EC /* astrology_macos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "astrology_macos-Bridging-Header.h"; sourceTree = "<group>"; };
 		F43E270027949679003570EC /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		F43E270127949679003570EC /* version.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = version.c; sourceTree = "<group>"; };
+		F495368C27959FB800EBD463 /* swehel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swehel.c; sourceTree = "<group>"; };
+		F495368D27959FB800EBD463 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		F495368E27959FB800EBD463 /* swehouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swehouse.h; sourceTree = "<group>"; };
+		F495368F27959FB800EBD463 /* swemplan.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swemplan.c; sourceTree = "<group>"; };
+		F495369027959FB800EBD463 /* swejpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swejpl.h; sourceTree = "<group>"; };
+		F495369127959FB800EBD463 /* swejpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swejpl.c; sourceTree = "<group>"; };
+		F495369227959FB800EBD463 /* sweph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweph.h; sourceTree = "<group>"; };
+		F495369327959FB800EBD463 /* swephlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swephlib.h; sourceTree = "<group>"; };
+		F495369427959FB800EBD463 /* seleapsec.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = seleapsec.txt; sourceTree = "<group>"; };
+		F495369527959FB800EBD463 /* sedeltat.txt.inactive */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sedeltat.txt.inactive; sourceTree = "<group>"; };
+		F495369627959FB800EBD463 /* swedate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swedate.c; sourceTree = "<group>"; };
+		F495369727959FB900EBD463 /* swehouse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swehouse.c; sourceTree = "<group>"; };
+		F495369827959FB900EBD463 /* swephlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swephlib.c; sourceTree = "<group>"; };
+		F495369927959FB900EBD463 /* swepdate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swepdate.c; sourceTree = "<group>"; };
+		F495369B27959FB900EBD463 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		F495369C27959FB900EBD463 /* swenut2000a.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swenut2000a.h; sourceTree = "<group>"; };
+		F495369D27959FB900EBD463 /* sweph.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sweph.c; sourceTree = "<group>"; };
+		F495369E27959FB900EBD463 /* sweodef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweodef.h; sourceTree = "<group>"; };
+		F495369F27959FB900EBD463 /* swemptab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swemptab.h; sourceTree = "<group>"; };
+		F49536A027959FB900EBD463 /* swepcalc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swepcalc.c; sourceTree = "<group>"; };
+		F49536A127959FB900EBD463 /* swepcalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swepcalc.h; sourceTree = "<group>"; };
+		F49536A227959FB900EBD463 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F49536A327959FB900EBD463 /* compile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compile.h; sourceTree = "<group>"; };
+		F49536A427959FB900EBD463 /* swecl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swecl.c; sourceTree = "<group>"; };
+		F49536A527959FB900EBD463 /* swedate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swedate.h; sourceTree = "<group>"; };
+		F49536A627959FB900EBD463 /* swephexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swephexp.h; sourceTree = "<group>"; };
+		F49536A727959FB900EBD463 /* seorbel.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = seorbel.txt; sourceTree = "<group>"; };
+		F49536A827959FB900EBD463 /* swedll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swedll.h; sourceTree = "<group>"; };
+		F49536A927959FB900EBD463 /* swemmoon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swemmoon.c; sourceTree = "<group>"; };
+		F49536AA27959FBA00EBD463 /* sefstars.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sefstars.txt; sourceTree = "<group>"; };
+		F49536BE27959FC400EBD463 /* CodeBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeBridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,12 +188,51 @@
 		F43E26BF27948EB6003570EC /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				F495368B27959F7400EBD463 /* Swe */,
 				F43E26C127948ECE003570EC /* Swe.swift */,
 				F43E270027949679003570EC /* version.h */,
 				F43E270127949679003570EC /* version.c */,
 				F43E26FF27949679003570EC /* astrology_macos-Bridging-Header.h */,
 			);
 			path = Types;
+			sourceTree = "<group>";
+		};
+		F495368B27959F7400EBD463 /* Swe */ = {
+			isa = PBXGroup;
+			children = (
+				F495368D27959FB800EBD463 /* CMakeLists.txt */,
+				F49536A327959FB900EBD463 /* compile.h */,
+				F49536A227959FB900EBD463 /* LICENSE */,
+				F495369B27959FB900EBD463 /* Makefile */,
+				F495369527959FB800EBD463 /* sedeltat.txt.inactive */,
+				F49536AA27959FBA00EBD463 /* sefstars.txt */,
+				F495369427959FB800EBD463 /* seleapsec.txt */,
+				F49536A727959FB900EBD463 /* seorbel.txt */,
+				F49536A427959FB900EBD463 /* swecl.c */,
+				F495369627959FB800EBD463 /* swedate.c */,
+				F49536A527959FB900EBD463 /* swedate.h */,
+				F49536A827959FB900EBD463 /* swedll.h */,
+				F495368C27959FB800EBD463 /* swehel.c */,
+				F495369727959FB900EBD463 /* swehouse.c */,
+				F495368E27959FB800EBD463 /* swehouse.h */,
+				F495369127959FB800EBD463 /* swejpl.c */,
+				F495369027959FB800EBD463 /* swejpl.h */,
+				F49536A927959FB900EBD463 /* swemmoon.c */,
+				F495368F27959FB800EBD463 /* swemplan.c */,
+				F495369F27959FB900EBD463 /* swemptab.h */,
+				F495369C27959FB900EBD463 /* swenut2000a.h */,
+				F495369E27959FB900EBD463 /* sweodef.h */,
+				F49536A027959FB900EBD463 /* swepcalc.c */,
+				F49536A127959FB900EBD463 /* swepcalc.h */,
+				F495369927959FB900EBD463 /* swepdate.c */,
+				F495369D27959FB900EBD463 /* sweph.c */,
+				F495369227959FB800EBD463 /* sweph.h */,
+				F49536A627959FB900EBD463 /* swephexp.h */,
+				F495369827959FB900EBD463 /* swephlib.c */,
+				F495369327959FB800EBD463 /* swephlib.h */,
+				F49536BE27959FC400EBD463 /* CodeBridge.h */,
+			);
+			path = Swe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +324,8 @@
 				Base,
 			);
 			mainGroup = F43E268827948CC9003570EC;
+			packageReferences = (
+			);
 			productRefGroup = F43E269227948CC9003570EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -252,8 +342,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F49536BB27959FBA00EBD463 /* seorbel.txt in Resources */,
+				F49536B927959FBA00EBD463 /* LICENSE in Resources */,
+				F49536AF27959FBA00EBD463 /* seleapsec.txt in Resources */,
 				F43E269C27948CCA003570EC /* Preview Assets.xcassets in Resources */,
 				F43E269927948CCA003570EC /* Assets.xcassets in Resources */,
+				F49536BD27959FBA00EBD463 /* sefstars.txt in Resources */,
+				F49536B027959FBA00EBD463 /* sedeltat.txt.inactive in Resources */,
+				F49536AC27959FBA00EBD463 /* CMakeLists.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,10 +374,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F49536AB27959FBA00EBD463 /* swehel.c in Sources */,
+				F49536B727959FBA00EBD463 /* sweph.c in Sources */,
+				F49536BC27959FBA00EBD463 /* swemmoon.c in Sources */,
 				F43E270227949679003570EC /* version.c in Sources */,
+				F49536AE27959FBA00EBD463 /* swejpl.c in Sources */,
+				F49536AD27959FBA00EBD463 /* swemplan.c in Sources */,
+				F49536BA27959FBA00EBD463 /* swecl.c in Sources */,
+				F49536B227959FBA00EBD463 /* swehouse.c in Sources */,
+				F49536B327959FBA00EBD463 /* swephlib.c in Sources */,
 				F43E269727948CC9003570EC /* ContentView.swift in Sources */,
+				F49536B427959FBA00EBD463 /* swepdate.c in Sources */,
+				F49536B827959FBA00EBD463 /* swepcalc.c in Sources */,
 				F43E269527948CC9003570EC /* astrology_macosApp.swift in Sources */,
+				F49536B627959FBA00EBD463 /* Makefile in Sources */,
 				F43E26C227948ECE003570EC /* Swe.swift in Sources */,
+				F49536B127959FBA00EBD463 /* swedate.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +548,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = astrology_macos/astrology_macos.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -451,7 +560,15 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "\"${PROJECT_DIR}/astrology_macos/C/Swe/swisseph/2.08/src\"/**";
+				LIBRARY_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/astrology_macos/C/Swe/swisseph/2.08/src\"/**",
+					"$(PROJECT_DIR)/astrology_macos/C",
+					"$(PROJECT_DIR)/astrology_macos/C/swisseph/2.08/src",
+					"$(PROJECT_DIR)/astrology_macos/Types/swisseph/2.08/src",
+					"$(PROJECT_DIR)/astrology_macos/Types/sweph/bin",
+					"$(PROJECT_DIR)/astrology_macos/Types/sweph/vb",
+					"$(PROJECT_DIR)/astrology_macos/Types",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "stephane.bressani.dev.astrology-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -469,6 +586,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = astrology_macos/astrology_macos.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -480,7 +598,15 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "\"${PROJECT_DIR}/astrology_macos/C/Swe/swisseph/2.08/src\"/**";
+				LIBRARY_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/astrology_macos/C/Swe/swisseph/2.08/src\"/**",
+					"$(PROJECT_DIR)/astrology_macos/C",
+					"$(PROJECT_DIR)/astrology_macos/C/swisseph/2.08/src",
+					"$(PROJECT_DIR)/astrology_macos/Types/swisseph/2.08/src",
+					"$(PROJECT_DIR)/astrology_macos/Types/sweph/bin",
+					"$(PROJECT_DIR)/astrology_macos/Types/sweph/vb",
+					"$(PROJECT_DIR)/astrology_macos/Types",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "stephane.bressani.dev.astrology-macos";
 				PRODUCT_NAME = "$(TARGET_NAME)";

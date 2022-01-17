@@ -13,8 +13,16 @@ enum Bg {
     case ChoseNote, ChoseScale, Empty
 }
 
-class Hello {
-    func hello_world() -> String {
+class Swe02 {
+    func version() -> String {
+        let version = "2.08"
+        let versionCString = version.cString(using: .utf8)
+        let versionPtr = UnsafeMutablePointer<Int8>(mutating: versionCString)
+        let version_res = String.init(cString: swe_version(versionPtr)) as String
+        return version_res
+    }
+    /*
+    func hello_world() -> String
         /*
         /// Get version of swiss ephemeris
         pub fn version() -> String {
@@ -27,9 +35,12 @@ class Hello {
             };
             CString::from(v).to_str().unwrap().to_string()
         }*/
-        let v = version(1)
-        
-        
-        return v.formatted()
-    }
+        let v = "2.09"
+        //let path = Bundle.main.bundlePath
+        let path = v.cString(using: String.Encoding.utf8)
+        //let param = UnsafeMutablePointer<Int8>(mutating: (path as NSString).utf8String)
+        let param = UnsafeMutablePointer<Int8>(mutating: path)
+        let vv = String.init(cString: swe_version(param)) as String
+        return vv
+    }*/
 }

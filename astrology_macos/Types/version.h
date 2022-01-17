@@ -10,6 +10,6 @@
 
 #include <stdio.h>
 
-int version(int a);
+int version2(int a);
 
 #endif /* version_h */

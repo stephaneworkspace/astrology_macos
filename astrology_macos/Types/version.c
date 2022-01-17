@@ -7,7 +7,7 @@
 
 #include "version.h"
 
-int version(int a)
+int version2(int a)
 {
     return a * 2;
 }
