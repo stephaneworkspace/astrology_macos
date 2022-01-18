@@ -75,26 +75,24 @@ struct Swe03CalcUtResult {
     var speed_longitude: Double
     var speed_latitude: Double
     var speed_distance_au: Double
-    var status: Int
+    var status: Int32
     var serr: String
 }
 
 extension Swe03CalcUtResult {
-    mutating func calc_ut(tjd_ut: Double, ipl: Bodies, iflag: Int) {
-        /*var xx: [Double] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        let xxPtr = UnsafeMutablePointer<Double>(mutating: xx)
-        let serrString = ""
-        let serrCString = serrString.cString(using: .utf8)
-        let serrPtr = UnsafeMutablePointer<Int8>(mutating: serrCString)
+    mutating func calc_ut(tjd_ut: Double, ipl: Bodies, iflag: Int32) {
+        /*
+        To convert from String to UnsafeMutablePointer<Int8>
+        let cString = strdup("Hello") // UnsafeMutablePointer<Int8>
         */
         let xxPtr = UnsafeMutablePointer<Double>.allocate(capacity: 6)
         let serrPtr = UnsafeMutablePointer<Int8>.allocate(capacity: 255)
         let status: Int
         // TODO make proper Node South/True later
         if ipl == Bodies.SouthNode {
-            status = Int(swe_calc_ut(tjd_ut, Int32(Bodies.TrueNode.rawValue), Int32(iflag), xxPtr, serrPtr))
+            status = Int(swe_calc_ut(tjd_ut, Bodies.TrueNode.rawValue, iflag, xxPtr, serrPtr))
         } else {
-            status = Int(swe_calc_ut(tjd_ut, Int32(ipl.rawValue), Int32(iflag), xxPtr, serrPtr))
+            status = Int(swe_calc_ut(tjd_ut, ipl.rawValue, iflag, xxPtr, serrPtr))
         }
         let serrString2 = "." // TODO later String.init(cString: serrCString!) as String
         // TODO make proper Node South/True later
@@ -117,28 +115,48 @@ extension Swe03CalcUtResult {
 }
 
 class Swe08 {
-    func julday(year: Int, month: Int, day: Int, hour: Double, calandar: Calandar) -> Double {
-        let res = swe_julday(Int32(year), Int32(month), Int32(day), hour, Int32(calandar.rawValue))
+    func julday(year: Int32, month: Int32, day: Int32, hour: Double, calandar: Calandar) -> Double {
+        let res = swe_julday(year, month, day, hour, calandar.rawValue)
         return res
     }
 }
 
-struct Swe08UtcTimeZoneResult {
-    var year: [Int]
-    var month: [Int]
-    var day: [Int]
-    var hour: [Int]
-    var calandar: Calandar
+struct Swe08UtcTimeZone {
+    var year: Int32
+    var month: Int32
+    var day: Int32
+    var hour: Int32
+    var min: Int32
+    var sec: Double
 }
 
-/*
-extension Swe08UtcTimeZoneResult {
-   func utc_time_zone(Int year, Int month, Int day, Double hour, Calandar: calandar) ->
-}*/
+extension Swe08UtcTimeZone {
+    mutating func utc_time_zone(timezone: Double) {
+        let yearPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 2)
+        let monthPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 2)
+        let dayPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 2)
+        let hourPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 2)
+        let minPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 2)
+        let secPtr = UnsafeMutablePointer<Double>.allocate(capacity: 2)
+        swe_utc_time_zone(year, month, day, hour, min, sec, timezone, yearPtr, monthPtr, dayPtr, hourPtr, minPtr, secPtr)
+        year = yearPtr.pointee
+        month = monthPtr.pointee
+        day = dayPtr.pointee
+        hour = hourPtr.pointee
+        min = minPtr.pointee
+        sec = secPtr.pointee
+        free(yearPtr)
+        free(monthPtr)
+        free(dayPtr)
+        free(hourPtr)
+        free(minPtr)
+        free(secPtr)
+    }
+}
 
 // Enum
 
-enum Bodies: Int {
+enum Bodies: Int32 {
     case EclNut = -1,
          Sun = 0,
          Moon = 1,
@@ -218,7 +236,7 @@ enum Bodies: Int {
          AsteroidNessus = 17066
 }
 
-enum Calandar: Int {
+enum Calandar: Int32 {
     case Julian = 0, Gregorian = 1
 }
 
