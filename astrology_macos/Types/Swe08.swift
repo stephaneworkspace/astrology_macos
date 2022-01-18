@@ -11,9 +11,24 @@ class Swe08 {
         let res = swe_julday(year, month, day, hour, calandar.rawValue)
         return res
     }
+
+    struct UtcToJd {
+        var julian_day_et: Double
+        var julian_day_ut: Double
+        var err: String
+        var result: Int32
+    }
+
+    func utc_to_jd(tz: TimeZone, calandar: Calandar) -> UtcToJd {
+        let dretPtr = UnsafeMutablePointer<Double>.allocate(capacity: 2)
+        let serrPtr = UnsafeMutablePointer<Int8>.allocate(capacity: 255)
+        let result = swe_utc_to_jd(tz.year, tz.month, tz.day, tz.hour, tz.min, tz.sec, calandar.rawValue, dretPtr, serrPtr)
+        let serr = String(cString: serrPtr)
+        return UtcToJd(julian_day_et: dretPtr[0], julian_day_ut: dretPtr[1], err: serr, result: result)
+    }
 }
 
-struct Swe08UtcTimeZone {
+struct TimeZone {
     var year: Int32
     var month: Int32
     var day: Int32
@@ -22,7 +37,7 @@ struct Swe08UtcTimeZone {
     var sec: Double
 }
 
-extension Swe08UtcTimeZone {
+extension TimeZone {
     mutating func utc_time_zone(timezone: Double) {
         let yearPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 2)
         let monthPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 2)

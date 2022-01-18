@@ -23,5 +23,10 @@ double swe_julday(int year, int month, int day, double hour, int calandar);
 
 void swe_utc_time_zone(int year, int month, int day, int hour, int min, double sec, double dtz, int *p_year_out, int *p_month_out, int *p_day_out, int *p_hour_out, int *p_min_out, double *p_sec_out);
 
+int swe_utc_to_jd(int year, int month, int day, int hour, int min, double sec, int gregflag, double *dret, char *serr);
+
 // Swe14
 int swe_houses_ex(double tjd_ut, int iflag, double geolat, double geolon, int hsys, double *cusps, double *ascmc);
+
+// Swe17
+double swe_split_deg(double ddeg, int roundflag, int *ideg, int *imin, int *isec, double *dsecfr, int *isgn);

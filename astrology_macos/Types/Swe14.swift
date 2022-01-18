@@ -11,32 +11,30 @@ class Swe14 {
         var result: Int32
     }
 
-    func houses(tjd_ut: Double, geolat: Double, geolong: Double, hsys: CChar) {
+    func houses(tjd_ut: Double, geolat: Double, geolong: Double, hsys: CChar) -> [House] {
         let cuspsPtr = UnsafeMutablePointer<Double>.allocate(capacity: 37)
         let ascmcPtr = UnsafeMutablePointer<Double>.allocate(capacity: 10)
-        let result = swe_houses_ex(tjd_ut, 0, geolat, geolong, Int32(hsys), cuspsPtr, ascmcPtr)
-        /*
-        let cusps: [Double] init
+        let _ = swe_houses_ex(tjd_ut, 0, geolat, geolong, Int32(hsys), cuspsPtr, ascmcPtr)
+        var house: [House] = []
         for i in 1...12 {
-            cusps.append(cuspsPtr[i])
-        }*/
-        //let res = HouseResult(cusps, ascmcPtr.pointee, result)
+            let angle = Angle.Nothing
+            house.append(House.init(object_id: Int32(i), longitude: cuspsPtr[i], angle: angle))
+        }
+        return house
     }
 }
 
 struct House {
     var object_id: Int32
     var longitude: Double
-    var splt: SplitDeg
+    var split: Swe17.SplitDeg
     var angle: Angle
 }
 
-struct SplitDeg {
-    var print: String
-    var deg: Int32
-    var min: Int32
-    var sec: Int32
-    var cdegfr: Double
-    var sign: Signs
-    var result: Double
+extension House {
+    init(object_id: Int32, longitude: Double, angle: Angle) {
+        let swe17 = Swe17()
+        let split_deg = swe17.split_deg(ddeg: longitude, roundflag: 0)
+        self.init(object_id: object_id, longitude: longitude, split: split_deg, angle: angle)
+    }
 }
