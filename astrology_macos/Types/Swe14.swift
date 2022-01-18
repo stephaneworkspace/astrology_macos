@@ -11,30 +11,30 @@ class Swe14 {
         var result: Int32
     }
 
-    func houses(tjd_ut: Double, geolat: Double, geolong: Double, hsys: CChar) -> [House] {
+    func houses(tjdUt: Double, geoLat: Double, geoLong: Double, hsys: CChar) -> [House] {
         let cuspsPtr = UnsafeMutablePointer<Double>.allocate(capacity: 37)
         let ascmcPtr = UnsafeMutablePointer<Double>.allocate(capacity: 10)
-        let _ = swe_houses_ex(tjd_ut, 0, geolat, geolong, Int32(hsys), cuspsPtr, ascmcPtr)
+        let _ = swe_houses_ex(tjdUt, 0, geoLat, geoLong, Int32(hsys), cuspsPtr, ascmcPtr)
         var house: [House] = []
-        for i in 1...12 {
-            let angle = Angle.Nothing
-            house.append(House.init(object_id: Int32(i), longitude: cuspsPtr[i], angle: angle))
+        for pos in 1...12 {
+            let angle = Angle.nothing
+            house.append(House.init(objectId: Int32(pos), longitude: cuspsPtr[pos], angle: angle))
         }
         return house
     }
 }
 
 struct House {
-    var object_id: Int32
+    var objectId: Int32
     var longitude: Double
     var split: Swe17.SplitDeg
     var angle: Angle
 }
 
 extension House {
-    init(object_id: Int32, longitude: Double, angle: Angle) {
+    init(objectId: Int32, longitude: Double, angle: Angle) {
         let swe17 = Swe17()
-        let split_deg = swe17.split_deg(ddeg: longitude, roundflag: 0)
-        self.init(object_id: object_id, longitude: longitude, split: split_deg, angle: angle)
+        let splitdeg = swe17.split_deg(ddeg: longitude, roundflag: 0)
+        self.init(objectId: objectId, longitude: longitude, split: splitdeg, angle: angle)
     }
 }

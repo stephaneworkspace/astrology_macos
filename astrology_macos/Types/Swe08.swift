@@ -13,8 +13,8 @@ class Swe08 {
     }
 
     struct UtcToJd {
-        var julian_day_et: Double
-        var julian_day_ut: Double
+        var julianDayEt: Double
+        var julianDayUt: Double
         var err: String
         var result: Int32
     }
@@ -24,7 +24,7 @@ class Swe08 {
         let serrPtr = UnsafeMutablePointer<Int8>.allocate(capacity: 255)
         let result = swe_utc_to_jd(tz.year, tz.month, tz.day, tz.hour, tz.min, tz.sec, calandar.rawValue, dretPtr, serrPtr)
         let serr = String(cString: serrPtr)
-        return UtcToJd(julian_day_et: dretPtr[0], julian_day_ut: dretPtr[1], err: serr, result: result)
+        return UtcToJd(julianDayEt: dretPtr[0], julianDayUt: dretPtr[1], err: serr, result: result)
     }
 }
 

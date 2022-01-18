@@ -17,32 +17,41 @@ class Swe03 {
     struct CalcUtResult {
         var longitude: Double
         var latitude: Double
-        var distance_au: Double
-        var speed_longitude: Double
-        var speed_latitude: Double
-        var speed_distance_au: Double
+        var distanceAu: Double
+        var speedLongitude: Double
+        var speedLatitude: Double
+        var speedDistanceAu: Double
         var status: Int32
         var serr: String
     }
 
-    func calc_ut(tjd_ut: Double, ipl: Bodies, iflag: OptionalFlag) -> CalcUtResult {
+    func calc_ut(tjdUt: Double, ipl: Bodies, iflag: OptionalFlag) -> CalcUtResult {
         let xxPtr = UnsafeMutablePointer<Double>.allocate(capacity: 6)
         let serrPtr = UnsafeMutablePointer<Int8>.allocate(capacity: 255)
         let status: Int32
         // TODO make proper Node South/True later
-        if ipl == Bodies.SouthNode {
-            status = swe_calc_ut(tjd_ut, Bodies.TrueNode.rawValue, iflag.rawValue, xxPtr, serrPtr)
+        if ipl == Bodies.southNode {
+            status = swe_calc_ut(tjdUt, Bodies.trueNode.rawValue, iflag.rawValue, xxPtr, serrPtr)
         } else {
-            status = swe_calc_ut(tjd_ut, ipl.rawValue, iflag.rawValue, xxPtr, serrPtr)
+            status = swe_calc_ut(tjdUt, ipl.rawValue, iflag.rawValue, xxPtr, serrPtr)
         }
         // TODO make proper Node South/True later
-        if ipl == Bodies.SouthNode {
+        if ipl == Bodies.southNode {
             xxPtr[0] += 180.0
             if xxPtr[0] >= 360.0 {
                 xxPtr[0] -= 360.0
             }
         }
-        let res = CalcUtResult(longitude: xxPtr[0], latitude: xxPtr[1], distance_au: xxPtr[2], speed_longitude: xxPtr[3], speed_latitude: xxPtr[4], speed_distance_au: xxPtr[5], status: status, serr: String(cString: serrPtr))
+        let res = CalcUtResult(
+                longitude: xxPtr[0],
+                latitude: xxPtr[1],
+                distanceAu: xxPtr[2],
+                speedLongitude: xxPtr[3],
+                speedLatitude: xxPtr[4],
+                speedDistanceAu: xxPtr[5],
+                status: status,
+                serr: String(cString: serrPtr))
+        // TODO free everyvere
         free(xxPtr)
         free(serrPtr)
         return res

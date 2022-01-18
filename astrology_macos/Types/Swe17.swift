@@ -16,21 +16,22 @@ class Swe17 {
     }
 
     func split_deg(ddeg: Double, roundflag: Int32) -> SplitDeg {
-        let sign_calc = (ddeg / 30.0).rounded(.down)
-        let house_calc = (ddeg / 30.0).rounded(.down)
-        let long_30 = (house_calc * 30) - ddeg;
+        let signcalc = (ddeg / 30.0).rounded(.down)
+        let housecalc = (ddeg / 30.0).rounded(.down)
+        let long30 = (housecalc * 30) - ddeg;
         let degPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
         let minPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
         let secPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
         let cdegfrPtr = UnsafeMutablePointer<Double>.allocate(capacity: 1)
         let isgnPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
-        let result = swe_split_deg(long_30, roundflag, degPtr, minPtr, secPtr, cdegfrPtr, isgnPtr)
+        let result = swe_split_deg(long30, roundflag, degPtr, minPtr, secPtr, cdegfrPtr, isgnPtr)
         let print = "\(abs(degPtr[0]))°\(minPtr[0])\'\(secPtr[0])"
-        var sign = Signs.Aries
-        for i in 1...12 {
-            let sign_temp: Signs = Signs.init(rawValue: Int32(i)) ?? Signs.Aries
-            if i == sign_temp.rawValue {
-                sign = sign_temp
+        var sign = Signs.aries
+        for pos in 1...12 {
+            // TODO fix that
+            let signtemp: Signs = Signs.init(rawValue: Int32(pos)) ?? Signs.aries
+            if pos == signtemp.rawValue {
+                sign = signtemp
                 break
             }
         }
