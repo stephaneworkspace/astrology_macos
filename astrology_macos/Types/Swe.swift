@@ -60,13 +60,6 @@ class Swe02 {
 
     // Get library path (don't work on apple)
     func get_library_path() -> String {
-        var path = ""
-        var pathCString = path.cString(using: .utf8)
-        //var pathCString = makeCString(from: path)//
-        //var pathCString = path.cString(using: .utf8)
-
-        //var pathPtr: UnsafeMutablePointer<Int8> = .init(&pathCString!);
-
         let pathPtr = UnsafeMutablePointer<Int8>.allocate(capacity: 255)
         let res = String.init(cString: swe_get_library_path(pathPtr)) as String
         free(pathPtr)
@@ -88,11 +81,14 @@ struct Swe03CalcUtResult {
 
 extension Swe03CalcUtResult {
     mutating func calc_ut(tjd_ut: Double, ipl: Bodies, iflag: Int) {
-        var xx: [Double] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        /*var xx: [Double] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         let xxPtr = UnsafeMutablePointer<Double>(mutating: xx)
         let serrString = ""
         let serrCString = serrString.cString(using: .utf8)
         let serrPtr = UnsafeMutablePointer<Int8>(mutating: serrCString)
+        */
+        let xxPtr = UnsafeMutablePointer<Double>.allocate(capacity: 6)
+        let serrPtr = UnsafeMutablePointer<Int8>.allocate(capacity: 255)
         let status: Int
         // TODO make proper Node South/True later
         if ipl == Bodies.SouthNode {
@@ -103,18 +99,18 @@ extension Swe03CalcUtResult {
         let serrString2 = "." // TODO later String.init(cString: serrCString!) as String
         // TODO make proper Node South/True later
         if ipl == Bodies.SouthNode {
-            xx[0] += 180.0
-            if xx[0] >= 360.0 {
-                xx[0] -= 360.0
+            xxPtr[0] += 180.0
+            if xxPtr[0] >= 360.0 {
+                xxPtr[0] -= 360.0
             }
         }
-        longitude = xx[0]
-        latitude = xx[1]
-        distance_au = xx[2]
-        speed_longitude = xx[3]
-        speed_latitude = xx[4]
-        speed_distance_au = xx[5]
-        serr = serrString2
+        longitude = xxPtr[0]
+        latitude = xxPtr[1]
+        distance_au = xxPtr[2]
+        speed_longitude = xxPtr[3]
+        speed_latitude = xxPtr[4]
+        speed_distance_au = xxPtr[5]
+        serr = String(cString: serrPtr)
         free(xxPtr)
         free(serrPtr)
     }
