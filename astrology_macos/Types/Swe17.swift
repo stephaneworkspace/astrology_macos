@@ -16,9 +16,9 @@ class Swe17 {
     }
 
     func split_deg(ddeg: Double, roundflag: Int32) -> SplitDeg {
-        let signcalc = (ddeg / 30.0).rounded(.down)
-        let housecalc = (ddeg / 30.0).rounded(.down)
-        let long30 = (housecalc * 30) - ddeg;
+        let signCalc = (ddeg / 30.0).rounded(.down)
+        let houseCalc = (ddeg / 30.0).rounded(.down)
+        let long30 = (houseCalc * 30) - ddeg;
         let degPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
         let minPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
         let secPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
@@ -28,13 +28,19 @@ class Swe17 {
         let print = "\(abs(degPtr[0]))°\(minPtr[0])\'\(secPtr[0])"
         var sign = Signs.aries
         for pos in 1...12 {
-            // TODO fix that
-            let signtemp: Signs = Signs.init(rawValue: Int32(pos)) ?? Signs.aries
-            if pos == signtemp.rawValue {
-                sign = signtemp
+            let signTemp: Signs = Signs.init(rawValue: Int32(signCalc)) ?? Signs.aries
+            if pos == signTemp.rawValue {
+                sign = signTemp
                 break
             }
         }
-        return SplitDeg(print: print, deg: degPtr[0], min: minPtr[0], sec: secPtr[0], cdegfr: cdegfrPtr[0], sign: sign, result: result)
+        return SplitDeg(
+                print: print,
+                deg: degPtr[0],
+                min: minPtr[0],
+                sec: secPtr[0],
+                cdegfr: cdegfrPtr[0],
+                sign: sign,
+                result: result)
     }
 }
