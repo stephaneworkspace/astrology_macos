@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552E821CEC1983DDFA6A4A52 /* Swe07.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E85363DD99207AD6803A0 /* Swe07.swift */; };
 		552E82B2723455293674B9BF /* Swe08.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E8E65B7F69C5218238D44 /* Swe08.swift */; };
 		552E83978B7EEFCFEF221E04 /* Swe14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E8E61DD52656606AC484E /* Swe14.swift */; };
 		552E86DD1130CA1D3F60E773 /* Swe02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E848C5701450068C16426 /* Swe02.swift */; };
@@ -62,6 +63,7 @@
 		552E825A4C0857EAA9DA78B8 /* Swe17.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swe17.swift; sourceTree = "<group>"; };
 		552E82DDAC3A1DA5674543D4 /* Swe03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swe03.swift; sourceTree = "<group>"; };
 		552E848C5701450068C16426 /* Swe02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swe02.swift; sourceTree = "<group>"; };
+		552E85363DD99207AD6803A0 /* Swe07.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swe07.swift; sourceTree = "<group>"; };
 		552E8E61DD52656606AC484E /* Swe14.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swe14.swift; sourceTree = "<group>"; };
 		552E8E65B7F69C5218238D44 /* Swe08.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swe08.swift; sourceTree = "<group>"; };
 		F43E269127948CC9003570EC /* astrology_macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = astrology_macos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +210,7 @@
 				552E82DDAC3A1DA5674543D4 /* Swe03.swift */,
 				552E8E61DD52656606AC484E /* Swe14.swift */,
 				552E825A4C0857EAA9DA78B8 /* Swe17.swift */,
+				552E85363DD99207AD6803A0 /* Swe07.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				552E89E25DF5FD236E468D06 /* Swe03.swift in Sources */,
 				552E83978B7EEFCFEF221E04 /* Swe14.swift in Sources */,
 				552E891C3BC6F70BB092C59D /* Swe17.swift in Sources */,
+				552E821CEC1983DDFA6A4A52 /* Swe07.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

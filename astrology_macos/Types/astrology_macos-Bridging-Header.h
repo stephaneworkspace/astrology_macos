@@ -16,7 +16,10 @@ char *swe_version(char *s);
 char *swe_get_library_path(char *path);
 
 // Swe03
-int swe_calc_ut(double tjd_ut, int ipl, int iflag, double *p_xx, char *p_serr);
+int swe_calc_ut(double tjd_ut, int ipl, int iflag, double *xx, char *serr);
+
+// Swe07
+int swe_pheno_ut(double tjd_ut, int ipl, int iflag, double *attr, char *serr);
 
 // Swe08
 double swe_julday(int year, int month, int day, double hour, int calandar);

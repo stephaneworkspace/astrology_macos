@@ -22,7 +22,15 @@ class Swe08 {
     func utc_to_jd(tz: TimeZone, calandar: Calandar) -> UtcToJd {
         let dretPtr = UnsafeMutablePointer<Double>.allocate(capacity: 2)
         let serrPtr = UnsafeMutablePointer<Int8>.allocate(capacity: 255)
-        let result = swe_utc_to_jd(tz.year, tz.month, tz.day, tz.hour, tz.min, tz.sec, calandar.rawValue, dretPtr, serrPtr)
+        let result = swe_utc_to_jd(
+                tz.year,
+                tz.month,
+                tz.day,
+                tz.hour,
+                tz.min,
+                tz.sec,
+                calandar.rawValue,
+                dretPtr, serrPtr)
         let serr = String(cString: serrPtr)
         return UtcToJd(julianDayEt: dretPtr[0], julianDayUt: dretPtr[1], err: serr, result: result)
     }
