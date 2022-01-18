@@ -28,7 +28,7 @@ class Swe17 {
         let print = "\(abs(degPtr[0]))°\(minPtr[0])\'\(secPtr[0])"
         var sign = Signs.aries
         for pos in 1...12 {
-            let signTemp: Signs = Signs.init(rawValue: Int32(signCalc)) ?? Signs.aries
+            let signTemp: Signs = Signs.init(rawValue: Int32(signCalc) + 1) ?? Signs.aries
             if pos == signTemp.rawValue {
                 sign = signTemp
                 break

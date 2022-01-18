@@ -12,11 +12,13 @@ func julday() -> String {
     // swe02.version()
     swe02.set_ephe_path()
     // let res = swe02.get_library_path()
-
+    let lat = 0.0
+    let lng = 0.0
     let swe08: Swe08 = Swe08()
     let julday = swe08.julday(year: 2021, month: 1, day: 24, hour: 0.0, calandar: .gregorian)
     let swe03 = Swe03()
     let res = swe03.calc_ut(tjdUt: julday, ipl: .sun, iflag: .speed)
+    print(res)
 
     var utcTimeZone = TimeZone(year: 2021, month: 1, day: 24, hour: 0, min: 0, sec: 0.0)
     utcTimeZone.utc_time_zone(timezone: 2.0)
@@ -27,13 +29,12 @@ func julday() -> String {
     let swe14 = Swe14()
     let houses = swe14.houses(
             tjdUt: utcToJd.julianDayUt,
-            geoLat: res.latitude,
-            geoLong: res.longitude,
+            geoLat: lat,
+            geoLong: lng,
             hsys: CChar("W") ?? CChar.init())
-    for house in houses {
+    /*for house in houses {
         print(house)
-
-    }
+    }*/
     swe02.close()
     return res.latitude.formatted() + " " + res.longitude.formatted()
 }
